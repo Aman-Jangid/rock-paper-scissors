@@ -1,16 +1,20 @@
 function getComputerChoice() {
-  const compChoice = Math.floor(Math.random() * 2);
+  const compChoice = Math.floor(Math.random() * 20);
   console.log(compChoice);
-  return compChoice;
+  if (compChoice <= 6) {
+    return 0;
+  } else if (compChoice > 6 && compChoice <= 13) {
+    return 1;
+  } else return 2;
 }
 
 function getUserChoice() {
   const userChoice = prompt("chose rock,paper or scissors");
-  if (userChoice.toLocaleLowerCase() === "rock") {
+  if (userChoice.toLowerCase() === "rock") {
     return 0;
-  } else if (userChoice.toLocaleLowerCase() === "paper") {
+  } else if (userChoice.toLowerCase() === "paper") {
     return 1;
-  } else if (userChoice.toLocaleLowerCase() === "scissors") {
+  } else if (userChoice.toLowerCase() === "scissors") {
     return 2;
   } else prompt("INVALID CHOICE");
 }
@@ -37,4 +41,6 @@ function game() {
   console.log(playRound(getUserChoice(), getComputerChoice()));
 }
 
-game();
+for (let i = 0; i < 5; i++) {
+  game();
+}
