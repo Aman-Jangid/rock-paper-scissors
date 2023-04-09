@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <h1>Rock paper scissors</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>rps</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="winner"></div>
+      <div class="score">
+        <div class="cpu_score">
+          0
+          <div class="cpu_name">
+            <span>CPU</span>
+          </div>
+        </div>
+        <span>:</span>
+        <div class="player_score active">
+          0
+          <div class="player_name">
+            <span>You</span>
+          </div>
+        </div>
+      </div>
+      <div class="play_area">
+        <div value="1" class="rock choice"></div>
+        <div value="2" class="paper choice"></div>
+        <div value="3" class="scissors choice"></div>
+      </div>
+      <div class="options">
+        <button class="restart" title="restart_game">♲</button>
+        <button class="current_turn">Start Game</button>
+        <button class="turns" title="number_of_turns">3</button>
+      </div>
+    </div>
+  </body>
 </html>
